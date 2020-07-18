@@ -58,12 +58,38 @@
          <div class="container">  
              <div class="hero-content" >
                 <h1 class="hero-title">Эффективные решения<br /> для вашего бизнеса</h1>
-                <button type="button" class="button button-primary">Заказать услугу </button>
+                <button type="submit" class="button button-primary">Заказать услугу </button>
             </div> 
         </div>
         </section>
       
-        <form autocomplete="off"> 
+
+
+        <!-- modal window -->
+        <div class="backdrop">  
+            <form class="modal">
+            <!-- <div role="group"> -->
+                <h6 class="modal-text"> Оставьте свои данные, мы вам перезвоним</h6>
+                <ul  class="modal-field">
+                    <li class="modal-field"><input class="modal-input"type="text" name="user-name" id="user-name"/>
+                        <label class="modal-label for="user-name">Имя</label></li>
+                    <li class="modal-field"><input class="modal-input" type="text" name="tel" id="tel"/>
+                        <label class="form-label for="tel">Телефон</label></li>
+                    <li class="modal-field"><input class="modal-input"type="email" name="email" id="email" autocomplete="on"/>
+                        <label class="form-label for="email">Почта</label></li>
+                    <li class="modal-field"> <textarea name="comment" id="comment" cols="20" rows="10" placeholder="Comment on">           
+                    </textarea>
+                    <label for="comment">Комментарий</label>
+                      </li>
+                     <li class="modal-field"><input type="checkbox" name="" value="agreement" id="agreement">
+                        <label for="agreement">Соглашаюсь с рассылкой и принимаю Условия договора</label></li>
+                        
+                </ul>
+                <button type="submit" class="button button-primary">Отправить</button>
+            </form>
+        </div>
+
+        <!-- <form autocomplete="off"> 
             <p class="form-field">
                 <label class="form-label" for="user-name">Name</label>
             <input class="form-input" type="text" name="user-name" id="user-name" autofocus placeholder="Mary Poppins"/>
@@ -74,8 +100,8 @@
         
         <div> <label for="email">Post</label>
             <input type="email" name="email" id="email" autocomplete="on"/></div>>
-           
-    <button type="submit">оставить заявку</button>
+       
+            <button type="submit">оставить заявку</button>
 <div role="group">
     <b>Choose several options</b>
 
@@ -117,23 +143,8 @@
 <input type="checkbox" name="policy" id="policy">
 
     </form> 
+ -->
 
-<!-- modal window -->
-        <div class="backdrop is-hidden"> 
-            <div class="modal">
-                <h6 class="modal-text"> Оставьте свои данные, мы вам перезвоним</h6>
-                <ul>
-                    <li>Имя</li>
-                    <li>Телефон</li>
-                    <li>Почта</li>
-                    <li>Комментарий</li>
-                </ul>
-                <p>Соглашаюсь с рассылкой и принимаю Условия договора</p>
-                <button>
-                    Отправить
-                </button>
-            </div>
-        </div>
 
 
         <!---features-->
@@ -484,7 +495,8 @@
         <!---subscription-->
         <div class="footer-list">
                 <b class="footer-subtitle">Подпишитесь на рассылку</b>
-                <button type="button" class="button button-primary">Подписаться
+                <label ><input type="email" name="email" placeholder="E-mail" id="email"></label>
+                <button type="submit" class="button button-primary">Подписаться
                     <svg class="icon-send">
                         <use href=./images/sprite.svg#icon-icon_send></use> 
                     </svg>
