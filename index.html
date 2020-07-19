@@ -73,9 +73,8 @@
                     <use href=./images/sprite.svg#icon-close></use> 
                 </svg>
              </button>
-            <!-- <div role="group"> -->
-                <h6 class="modal-text"> Оставьте свои данные, мы вам перезвоним</h6>
-                <form  autocomplete="off">
+                <h6 class="modal-title"> Оставьте свои данные, мы вам перезвоним</h6>
+                <form autocomplete="off">
                     <ul class="modal-info">
                         <li class="modal-field">
                             <input type="text" class="modal-input" name="name" id="name" placeholder=" "/>
@@ -97,21 +96,21 @@
                             <svg class="modal-icon" width="18" height="18">
                                 <use href=./images/sprite.svg#icon-email-black></use> 
                             </svg></li>
-                        <li class="modal-field"> 
-                            <textarea name="comment" id="comment"  placeholder=" ">           
+                        <li class="comment-field"> 
+                            <textarea name="comment" class="modal-textarea" id="comment"  placeholder=" ">           
                         </textarea>
-                        <label for="comment">Комментарий</label>
+                        <label for="comment" class="comment-label">Комментарий</label>
                         </li>
-                    </ul>
+                    
+                        <li  class="checkbox-form">
+                        <input class="checkbox" type="checkbox"  name="agreement" value="agreement" id="agreement">
+                            <label for="agreement" class="checkbox-text">Соглашаюсь с рассылкой и принимаю 
+                                <a class="agreement-conditions" href="#">Условия договора</a></label>
+                            <span class="checkbox-icon "></span>
+                        </li>
+                    </ul> 
+                    <button type="submit" class="button button-primary">Отправить</button>
                 </form>
-                <form>
-                    <input type="checkbox" name="agreement" value="agreement" id="agreement">
-                        <label for="agreement">Соглашаюсь с рассылкой и принимаю Условия договора</label>
-                </form>
-                     class="modal-field"
-                        
-              
-                <button type="submit" class="button button-primary">Отправить</button>
             </div>
         </div>
 

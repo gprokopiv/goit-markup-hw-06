@@ -352,9 +352,12 @@ img {
 .icon-close:focus {
     fill: var(--accent-color);
 }
+/* .form {
+padding: 0;
+margin: 0;
+} */
 
-
-.modal-text {
+.modal-title {
     display: inline-block;
     margin-top: 0; 
     margin-bottom: 30px;
@@ -365,12 +368,11 @@ img {
     text-align: center;
 }
 .modal-info {
-    display: inline-block;
     margin: 0;
     padding: 0;
-    width: 370px;
+    width: 100%;
 
- 
+    list-style: none;
     line-height: 1.14;
     letter-spacing: 0.01em;
 
@@ -378,8 +380,6 @@ img {
     }
 .modal-field {
     position: relative;
-    display: block;
-    
   }
 
 .modal-field:not(:last-child) {
@@ -403,8 +403,7 @@ img {
    
     /* transform: translateY(-30px);  */
     transition: transform var(--animation-duration) var(--animation-timing-function),
-    color var(--animation-duration) var(--animation-timing-function),
-    left var(--animation-duration) var(--animation-timing-function);
+    color var(--animation-duration) var(--animation-timing-function);
 
   }
  
@@ -412,8 +411,9 @@ img {
   .modal-input:focus +.modal-label,
   .modal-input:not(:placeholder-shown) +.modal-label {
     color: var(--accent-color);
-    transform: translateY(-30px); 
-    left: 10px;
+    /* transform: translateY(-30px); 
+    left: 10px; */
+    transform: translatex(-30px) translatey(-30px);
   
 }
 .modal-icon {
@@ -430,12 +430,88 @@ img {
 
 }
 
-textarea {
-     resize: none;
+/* styles for textarea */
+
+.comment-field {
+    position: relative;
+
+}
+.modal-textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    resize: none;
     height: 120px;
+    padding: 12px 16px;
 
  }
 
+.comment-label {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+
+    transition: transform var(--animation-duration) var(--animation-timing-function),
+    color var(--animation-duration) var(--animation-timing-function);
+
+}
+.modal-textarea:focus +.comment-label,
+.modal-textarea:not(:placeholder-shown) +.comment-label  {
+  color: var(--accent-color);
+  transform: translateY(-30px); 
+
+}
+
+/* styles for an agreement */
+.checkbox-form {
+    /* position: relative;  */
+
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.checkbox-text {
+    /* display: inline-block;
+    align-items: center;
+padding-left: 22px; */
+    font-size: 12px;
+    line-height: 1.16;
+    
+    letter-spacing: 0.03em;
+    
+}
+
+.agreement-conditions {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+.checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox-icon {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+
+    padding-left: 8px;
+    border: 2px solid #212121;
+    width: 15px;
+    height: 16px;
+    border-radius: 4px;
+     padding-right: 8px;
+}
+.checkbox:checked +.checkbox-icon {
+    background-color: var(--accent-color);
+    background-image: url(../images/tick.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    border-color: var(--accent-color);
+
+}
 
 .section-title {
     margin-top: 0px;
