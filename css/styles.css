@@ -489,8 +489,18 @@ padding-left: 22px; */
     -webkit-appearance: none;
     appearance: none;
     position: absolute;
+} 
+.checkbox-label {
+outline: 1px solid red;
 }
-
+.checkbox-label::before {
+    content: "";
+    display: inline-block;
+    border: 2px solid #212121;
+    width: 15px;
+    height: 16px;
+    border-radius: 4px;
+}
 .checkbox-icon {
     /* position: absolute;
     top: 0;
@@ -501,9 +511,8 @@ padding-left: 22px; */
     width: 15px;
     height: 16px;
     border-radius: 4px;
-     padding-right: 8px;
 }
-.checkbox:checked +.checkbox-icon {
+.checkbox:checked ~.checkbox-text::before {
     background-color: var(--accent-color);
     background-image: url(../images/tick.svg);
     background-size: contain;
